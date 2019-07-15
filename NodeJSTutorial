@@ -1,0 +1,34 @@
+1. download Node.js
+2. create a project directory
+3. execute: npm init
+	- set your settings in the feedback 
+install exrpress: npm install express -save
+	- this installs the express module and adds it as a dependency to the "package.json" file
+in app.js do the follwoing:
+
+	var express = require('express');
+	var app = express(); //initialize and get a handle to the express framework
+
+	//set up a path to the homepage
+	app.get('\', function(req, res) {
+		res.send("Hellow world");
+	})
+
+	//listens on a port and starts the server
+	app.listen('3000', function() {
+		console.log("listening on port str")
+	})
+
+
+
+"https://www1.dev.td.com/manage_card/" 
+
+router.delete("/:id", func(req, resp) {
+	
+	User.delete({req.params.id}, func(error, user) {
+		if error
+			resp.status(500).send("Could not delete the user " + req.params.id)
+		else
+			resp.status(200).send("Deleted the user: " + req.params.id)
+	})
+})
